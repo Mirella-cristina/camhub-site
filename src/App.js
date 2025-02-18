@@ -42,53 +42,53 @@ function App() {
   });
 
   return (
-    <div className="app">
-      <div className="header-logo">
+    <div class="app">
+      <div class="header-logo">
         <img src="/logo.png" alt="Logo" />
       </div>
 
       {loading ? (
-        <p className="loading-message">Carregando...</p>
+        <p class="loading-message">Carregando...</p>
       ) : error ? (
-        <p className="error-message">Erro: {error}</p>
+        <p class="error-message">Erro: {error}</p>
       ) : data.length === 0 ? (
-        <p className="no-data-message">Nenhum dado disponível.</p>
+        <p class="no-data-message">Nenhum dado disponível.</p>
       ) : (
         <>
-          <div className="camera-filter">
+          <div class="camera-filter">
             <button
-              className={`filter-btn ${filter === "Tudo" ? "active" : ""}`}
+              class={`filter-btn ${filter === "Tudo" ? "active" : ""}`}
               onClick={() => setFilter("Tudo")}
             >
               Tudo
             </button>
             <button
-              className={`filter-btn ${filter === "Online" ? "active" : ""}`}
+              class={`filter-btn ${filter === "Online" ? "active" : ""}`}
               onClick={() => setFilter("Online")}
             >
               Online
             </button>
             <button
-              className={`filter-btn ${filter === "Offline" ? "active" : ""}`}
+              class={`filter-btn ${filter === "Offline" ? "active" : ""}`}
               onClick={() => setFilter("Offline")}
             >
               Offline
             </button>
             <button
-              className={`filter-btn ${filter === "Erro" ? "active" : ""}`}
+              class={`filter-btn ${filter === "Erro" ? "active" : ""}`}
               onClick={() => setFilter("Erro")}
             >
               Erro
             </button>
             <button
-              className={`filter-btn ${filter === "Sem sinal" ? "active" : ""}`}
+              class={`filter-btn ${filter === "Sem sinal" ? "active" : ""}`}
               onClick={() => setFilter("Sem sinal")}
             >
               Sem sinal
             </button>
           </div>
 
-          <div className="camera-container">
+          <div class="camera-container">
             {filteredData.map((camera, index) => (
               <div key={index} className="camera-card">
                 <div
@@ -102,7 +102,7 @@ function App() {
                       : "error"
                   }`}
                 ></div>
-                <div className="camera-details">
+                <div class="camera-details">
                   <h3>{camera.name}</h3>
                   <p>Status: {camera.status}</p>
                   <p>Última atualização: {camera["last update"]}</p>
@@ -113,7 +113,7 @@ function App() {
         </>
       )}
 
-      <button className="add-camera-btn">+</button>
+      <button class="add-camera-btn">+</button>
     </div>
   );
 }

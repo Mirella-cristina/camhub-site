@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Home.css"; // Importando o CSS externo
+import "./Home.css"; 
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -44,21 +44,21 @@ const Home = () => {
   const isFormValid = name && URL && block && description;
 
   return (
-    <div className="container">
+    <div class="container">
       <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
           placeholder="Nome"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="input"
+          class="input"
         />
         <input
           type="text"
           placeholder="URL"
           value={URL}
           onChange={(e) => setURL(e.target.value)}
-          className="input"
+          class="input"
         />
 
         <select
@@ -84,12 +84,12 @@ const Home = () => {
           placeholder="Descrição"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="input"
+          class="input"
         />
 
         <button
           type="submit"
-          className={isFormValid ? "buttonEnabled" : "buttonDisabled"}
+          class={isFormValid ? "buttonEnabled" : "buttonDisabled"}
           disabled={!isFormValid}
         >
           Cadastrar

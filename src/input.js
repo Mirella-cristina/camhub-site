@@ -20,7 +20,8 @@ const Input = ({
   };
 
   return (
-    <div className="input-container">
+    <div class
+    ="input-container">
       <label htmlFor="input">{label}</label>
 
       
@@ -43,13 +44,13 @@ const Input = ({
 
     
       {onClickIcon && (
-        <span className="input-icon" onClick={onClickIcon}>
+        <span class="input-icon" onClick={onClickIcon}>
           &#x1F50D; 
         </span>
       )}
 
       
-      {errorText && <p className="error-message">{errorText}</p>}
+      {errorText && <p class="error-message">{errorText}</p>}
     </div>
   );
 };
