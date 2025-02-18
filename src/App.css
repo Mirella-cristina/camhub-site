@@ -10,15 +10,21 @@
 
 .header-logo {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; /* Logo à esquerda */
   align-items: center;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 20px; /* Espaçamento abaixo da logo */
 }
 
 .header-logo img {
-  width: 50px;
+  width: 50px; /* Tamanho da logo */
   height: 50px;
+  border-radius: 8px; /* Bordas arredondadas */
+  transition: transform 0.3s ease; /* Animação suave */
+}
+
+.header-logo img:hover {
+  transform: scale(1.1); /* Aumenta a logo ao passar o mouse */
 }
 
 .camera-filter {
@@ -32,18 +38,16 @@
 .filter-btn {
   background-color: #e0e0e0;
   color: #000;
-  padding: 15px 25px;
+  padding: 12px 20px;
   border-radius: 25px;
   cursor: pointer;
   border: 1px solid #ccc;
   font-size: 16px;
   text-align: center;
   flex: 1;
-  max-width: 120px;
+  max-width: 110px;
   margin: 0 5px;
 }
-
-
 
 .filter-btn.active {
   background-color: #4caf50;
@@ -60,13 +64,12 @@
 
 .camera-card {
   background-color: #333;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 100px;
   width: 100%;
   position: relative;
 }
@@ -86,12 +89,13 @@
 
 .camera-card p {
   font-size: 14px;
-  margin: 5px 0;
+  margin: 3px 0;
+  color: #bbb;
 }
 
 .status-dot {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -128,11 +132,6 @@
 }
 
 @media (max-width: 600px) {
-  .camera-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-
   .camera-filter {
     flex-direction: column;
     gap: 10px;
